@@ -1,9 +1,12 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf840
-{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 CourierNewPSMT;\f2\fmodern\fcharset0 CourierNewPS-BoldMT;
+}
 {\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red0\green0\blue0;\red11\green86\blue1;
-}
+\red15\green114\blue1;\red109\green109\blue109;\red10\green82\blue135;\red0\green0\blue0;\red0\green0\blue255;
+\red251\green0\blue129;}
 {\*\expandedcolortbl;;\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c0\c0\c84314;\cssrgb\c0\c40000\c0;
-}
+\cssrgb\c0\c50980\c0;\cssrgb\c50196\c50196\c50196;\cssrgb\c0\c40000\c60000;\cssrgb\c0\c0\c0;\cssrgb\c0\c0\c100000;
+\cssrgb\c100000\c7843\c57647;}
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid1\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
 {\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
 \margl1440\margr1440\vieww24180\viewh14580\viewkind0
@@ -45,50 +48,310 @@ They are always defined in base class and overridden in derived class. It is not
 A class may have {\field{\*\fldinst{HYPERLINK "https://www.geeksforgeeks.org/virtual-destructor/"}}{\fldrslt \cf4 virtual destructor}} but it cannot have a virtual constructor.\
 \pard\tx720\pardeftab720\qj\parhyphenfactor20\partightenfactor0
 \cf0 \
-// CPP program to illustrate \
-// concept of Virtual Functions \
+\pard\pardeftab720\parhyphenfactor20\partightenfactor0
+
+\f1\fs29\fsmilli14913 \cf5 \cb2 // CPP program to illustrate 
+\fs30\fsmilli15064 \cf0 \
+
+\fs29\fsmilli14913 \cf5 // concept of Virtual Functions 
+\fs30\fsmilli15064 \cf0 \
+\pard\pardeftab720\parhyphenfactor20\partightenfactor0
+
+\fs29\fsmilli14913 \cf0 \'a0
+\fs30\fsmilli15064 \'a0\
+\pard\pardeftab720\parhyphenfactor20\partightenfactor0
+
+\fs29\fsmilli14913 \cf6 \cb2 #include <iostream> 
+\fs30\fsmilli15064 \cf0 \cb2 \
+\pard\pardeftab720\parhyphenfactor20\partightenfactor0
+
+\f2\b\fs29\fsmilli14913 \cf7 using
+\f1\b0\fs30\fsmilli15064 \cf0  
+\f2\b\fs29\fsmilli14913 \cf7 namespace
+\f1\b0\fs30\fsmilli15064 \cf0  
+\fs29\fsmilli14913 std; 
+\fs30\fsmilli15064 \
+\pard\pardeftab720\parhyphenfactor20\partightenfactor0
+
+\fs29\fsmilli14913 \cf0 \'a0
+\fs30\fsmilli15064 \'a0\
+\pard\pardeftab720\parhyphenfactor20\partightenfactor0
+
+\f2\b\fs29\fsmilli14913 \cf7 class
+\f1\b0\fs30\fsmilli15064 \cf0  
+\fs29\fsmilli14913 base \{ 
+\fs30\fsmilli15064 \
+
+\f2\b\fs29\fsmilli14913 \cf7 public
+\f1\b0 \cf0 : 
+\fs30\fsmilli15064 \
+\pard\pardeftab720\parhyphenfactor20\partightenfactor0
+
+\fs29\fsmilli14913 \cf0 \'a0\'a0\'a0\'a0
+\f2\b \cf7 virtual
+\f1\b0\fs30\fsmilli15064 \cf0  
+\f2\b\fs29\fsmilli14913 \cf7 void
+\f1\b0\fs30\fsmilli15064 \cf0  
+\fs29\fsmilli14913 print() 
+\fs30\fsmilli15064 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\{ 
+\fs30\fsmilli15064 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0cout << \cf9 \cb2 "print base class"
+\fs30\fsmilli15064 \cf0 \cb2  
+\fs29\fsmilli14913 << endl; 
+\fs30\fsmilli15064 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\} 
+\fs30\fsmilli15064 \
+
+\fs29\fsmilli14913 \'a0
+\fs30\fsmilli15064 \'a0\
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0
+\f2\b \cf7 void
+\f1\b0\fs30\fsmilli15064 \cf0  
+\fs29\fsmilli14913 show() 
+\fs30\fsmilli15064 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\{ 
+\fs30\fsmilli15064 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0cout << \cf9 \cb2 "show base class"
+\fs30\fsmilli15064 \cf0 \cb2  
+\fs29\fsmilli14913 << endl; 
+\fs30\fsmilli15064 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\} 
+\fs30\fsmilli15064 \
+\pard\pardeftab720\parhyphenfactor20\partightenfactor0
+
+\fs29\fsmilli14913 \cf0 \}; 
+\fs30\fsmilli15064 \
+\pard\pardeftab720\parhyphenfactor20\partightenfactor0
+
+\fs29\fsmilli14913 \cf0 \'a0
+\fs30\fsmilli15064 \'a0\
+\pard\pardeftab720\parhyphenfactor20\partightenfactor0
+
+\f2\b\fs29\fsmilli14913 \cf7 class
+\f1\b0\fs30\fsmilli15064 \cf0  
+\fs29\fsmilli14913 derived : 
+\f2\b \cf7 public
+\f1\b0\fs30\fsmilli15064 \cf0  
+\fs29\fsmilli14913 base \{ 
+\fs30\fsmilli15064 \
+
+\f2\b\fs29\fsmilli14913 \cf7 public
+\f1\b0 \cf0 : 
+\fs30\fsmilli15064 \
+\pard\pardeftab720\parhyphenfactor20\partightenfactor0
+
+\fs29\fsmilli14913 \cf0 \'a0\'a0\'a0\'a0
+\f2\b \cf7 void
+\f1\b0\fs30\fsmilli15064 \cf0  
+\fs29\fsmilli14913 print() 
+\fs30\fsmilli15064 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\{ 
+\fs30\fsmilli15064 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0cout << \cf9 \cb2 "print derived class"
+\fs30\fsmilli15064 \cf0 \cb2  
+\fs29\fsmilli14913 << endl; 
+\fs30\fsmilli15064 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\} 
+\fs30\fsmilli15064 \
+
+\fs29\fsmilli14913 \'a0
+\fs30\fsmilli15064 \'a0\
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0
+\f2\b \cf7 void
+\f1\b0\fs30\fsmilli15064 \cf0  
+\fs29\fsmilli14913 show() 
+\fs30\fsmilli15064 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\{ 
+\fs30\fsmilli15064 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0cout << \cf9 \cb2 "show derived class"
+\fs30\fsmilli15064 \cf0 \cb2  
+\fs29\fsmilli14913 << endl; 
+\fs30\fsmilli15064 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\} 
+\fs30\fsmilli15064 \
+\pard\pardeftab720\parhyphenfactor20\partightenfactor0
+
+\fs29\fsmilli14913 \cf0 \}; 
+\fs30\fsmilli15064 \
+\pard\pardeftab720\parhyphenfactor20\partightenfactor0
+
+\fs29\fsmilli14913 \cf0 \'a0
+\fs30\fsmilli15064 \'a0\
+\pard\pardeftab720\parhyphenfactor20\partightenfactor0
+
+\f2\b\fs29\fsmilli14913 \cf6 int
+\f1\b0\fs30\fsmilli15064 \cf0  
+\fs29\fsmilli14913 main() 
+\fs30\fsmilli15064 \
+\pard\pardeftab720\parhyphenfactor20\partightenfactor0
+
+\fs29\fsmilli14913 \cf0 \{ 
+\fs30\fsmilli15064 \
+\pard\pardeftab720\parhyphenfactor20\partightenfactor0
+
+\fs29\fsmilli14913 \cf0 \'a0\'a0\'a0\'a0base* bptr; 
+\fs30\fsmilli15064 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0derived d; 
+\fs30\fsmilli15064 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0bptr = &d; 
+\fs30\fsmilli15064 \
+
+\fs29\fsmilli14913 \'a0
+\fs30\fsmilli15064 \'a0\
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf5 // virtual function, binded at runtime 
+\fs30\fsmilli15064 \cf0 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0bptr->print(); 
+\fs30\fsmilli15064 \
+
+\fs29\fsmilli14913 \'a0
+\fs30\fsmilli15064 \'a0\
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\cf5 // Non-virtual function, binded at compile time 
+\fs30\fsmilli15064 \cf0 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0bptr->show(); 
+\fs30\fsmilli15064 \
+\pard\pardeftab720\parhyphenfactor20\partightenfactor0
+
+\fs29\fsmilli14913 \cf0 \}
+\f0\fs32 \cb2 \
+\pard\tx720\pardeftab720\qj\parhyphenfactor20\partightenfactor0
+\cf0 \cb2 \
+\pard\pardeftab720\parhyphenfactor20\partightenfactor0
+
+\b \cf0 \cb2 What is this pointer?\
+\pard\pardeftab720\parhyphenfactor20\partightenfactor0
+
+\b0 \cf0 \cb1 \
+\pard\pardeftab720\qj\parhyphenfactor20\partightenfactor0
+\cf0 \cb2 The {\field{\*\fldinst{HYPERLINK "https://www.geeksforgeeks.org/this-pointer-in-c/"}}{\fldrslt \cf4 \cb2 \'91this\'92 pointer }}is passed as a hidden argument to all nonstatic member function calls and is available as a local variable within the body of all nonstatic functions. \'91this\'92 pointer is a constant pointer that holds the memory address of the current object. \'91this\'92 pointer is not available in static member functions as static member functions can be called without any object (with class name).\
 \
-#include <iostream> \
-using namespace std; \
+
+\b \cb2 \'93delete this\'94 ?\
+\pard\pardeftab720\parhyphenfactor20\partightenfactor0
+
+\b0 \cf0 \cb2 delete operator works only for objects allocated using operator 
+\b \cb2 new
+\b0 \cb2 .\
 \
-class base \{ \
-public: \
-	virtual void print() \
-	\{ \
-		cout << "print base class" << endl; \
-	\} \
-\
-	void show() \
-	\{ \
-		cout << "show base class" << endl; \
-	\} \
-\}; \
-\
-class derived : public base \{ \
-public: \
-	void print() \
-	\{ \
-		cout << "print derived class" << endl; \
-	\} \
-\
-	void show() \
-	\{ \
-		cout << "show derived class" << endl; \
-	\} \
-\}; \
-\
-int main() \
-\{ \
-	base* bptr; \
-	derived d; \
-	bptr = &d; \
-\
-	// virtual function, binded at runtime \
-	bptr->print(); \
-\
-	// Non-virtual function, binded at compile time \
-	bptr->show(); \
-\} \
-\
-\
+\pard\pardeftab720\parhyphenfactor20\partightenfactor0
+
+\f2\b\fs29\fsmilli14913 \cf7 \cb2 class
+\f1\b0\fs30\fsmilli15064 \cf0  
+\fs29\fsmilli14913 A 
+\fs30\fsmilli15064 \
+
+\fs29\fsmilli14913 \{ 
+\fs30\fsmilli15064 \
+\pard\pardeftab720\parhyphenfactor20\partightenfactor0
+
+\fs29\fsmilli14913 \cf0 \'a0\'a0
+\f2\b \cf7 public
+\f1\b0 \cf0 : 
+\fs30\fsmilli15064 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0
+\f2\b \cf7 void
+\f1\b0\fs30\fsmilli15064 \cf0  
+\fs29\fsmilli14913 fun() 
+\fs30\fsmilli15064 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\{ 
+\fs30\fsmilli15064 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0
+\f2\b \cf7 delete
+\f1\b0\fs30\fsmilli15064 \cf0  
+\f2\b\fs29\fsmilli14913 \cf7 this
+\f1\b0 \cf0 ; 
+\fs30\fsmilli15064 \
+
+\fs29\fsmilli14913 \'a0\'a0\'a0\'a0\} 
+\fs30\fsmilli15064 \
+\pard\pardeftab720\parhyphenfactor20\partightenfactor0
+
+\fs29\fsmilli14913 \cf0 \}; 
+\fs30\fsmilli15064 \
+\pard\pardeftab720\parhyphenfactor20\partightenfactor0
+
+\fs29\fsmilli14913 \cf0 \'a0
+\fs30\fsmilli15064 \'a0\
+\pard\pardeftab720\parhyphenfactor20\partightenfactor0
+
+\f2\b\fs29\fsmilli14913 \cf6 int
+\f1\b0\fs30\fsmilli15064 \cf0  
+\fs29\fsmilli14913 main() 
+\fs30\fsmilli15064 \
+\pard\pardeftab720\parhyphenfactor20\partightenfactor0
+
+\fs29\fsmilli14913 \cf0 \{ 
+\fs30\fsmilli15064 \
+\pard\pardeftab720\parhyphenfactor20\partightenfactor0
+
+\fs29\fsmilli14913 \cf0 \'a0\'a0\cf5 /* Following is Valid */
+\fs30\fsmilli15064 \cf0 \
+
+\fs29\fsmilli14913 \'a0\'a0A *ptr = 
+\f2\b \cf7 new
+\f1\b0\fs30\fsmilli15064 \cf0  
+\fs29\fsmilli14913 A; 
+\fs30\fsmilli15064 \
+
+\fs29\fsmilli14913 \'a0\'a0ptr->fun(); 
+\fs30\fsmilli15064 \
+
+\fs29\fsmilli14913 \'a0\'a0ptr = NULL; \cf5 // make ptr NULL to make sure that things are not accessed using ptr.\'a0 
+\fs30\fsmilli15064 \cf0 \
+
+\fs29\fsmilli14913 \'a0
+\fs30\fsmilli15064 \'a0\
+
+\fs29\fsmilli14913 \'a0
+\fs30\fsmilli15064 \'a0\
+
+\fs29\fsmilli14913 \'a0\'a0\cf5 /* And following is Invalid: Undefined Behavior */
+\fs30\fsmilli15064 \cf0 \
+
+\fs29\fsmilli14913 \'a0\'a0A a; 
+\fs30\fsmilli15064 \
+
+\fs29\fsmilli14913 \'a0\'a0a.fun(); 
+\fs30\fsmilli15064 \
+
+\fs29\fsmilli14913 \'a0
+\fs30\fsmilli15064 \'a0\
+
+\fs29\fsmilli14913 \'a0\'a0
+\f2\b \cf10 getchar
+\f1\b0 \cf0 (); 
+\fs30\fsmilli15064 \
+
+\fs29\fsmilli14913 \'a0\'a0
+\f2\b \cf7 return
+\f1\b0\fs30\fsmilli15064 \cf0  
+\fs29\fsmilli14913 0; 
+\fs30\fsmilli15064 \
+\pard\pardeftab720\parhyphenfactor20\partightenfactor0
+
+\fs29\fsmilli14913 \cf0 \}
+\f0\fs32 \cb2 \
 }
